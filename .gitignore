@@ -4,3 +4,5 @@ db.sqlite3
 proj_auto/__pycache__
 app_auto/__pycache__
 app_auto/migrations/__pycache__
+
+.idea
