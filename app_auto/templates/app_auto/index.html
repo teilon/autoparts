@@ -13,16 +13,11 @@
 					<nav class="nav nav-masthead">
 						<!--<a href="#" class="nav-link active">Home</a>-->
 						<!--<a href="#" class="nav-link">Features</a>-->
-						<!--<a href="" class="nav-link">Contact</a>-->
+						<a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Вы можете оставить свой номер телефона</a>
 
-						<form class="inline my-2 my-lg-0">
-							<!--<label for="phone-text">мы вам перезвоним</label>-->
-							<input type="text" id="phone-text"
-                                   class="form-control mr-sm-2"
-                                   placeholder="номер телефона"
-                                   aria-label="Phone number">
-						</form>
-						<button class="btn btn-outline-success my-2 my-sm-0">Отправить</button>
+						
+						
+						<!-- my-2 my-sm-0 -->
 					</nav>
 				</div>
 			</header>
@@ -44,9 +39,46 @@
 					{% for model_name in models %}
 						{{ model_name }}
 					{% endfor %}
+
+					<!-- <form class="inline my-2 my-lg-0">
+						<label for="phone-text">Оставьте свой номер телефона, мы вам перезвоним</label>
+						<input type="text" id="phone-text"
+                               class="form-control mr-sm-2"
+                               placeholder="номер телефона"
+                               aria-label="Phone number">                          
+                        <button type="submit" class="btn btn-outline-secondary btn-sm my-2 mr-sm-2 btn-block">	Отправить</button>
+					</form> -->
+					
 				</div>
 			</footer>
 		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+	<div class="modal-dialog dlg" role="document">
+		<div class="modal-content">
+			<!-- <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel"></h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hiddet="true">&times;</span>
+				</button>
+			</div> -->
+			<div class="modal-body">
+				<!-- <p>Оставьте свой номер телефона, мы вам перезвоним</p> -->
+				<form class="inline my-2 my-lg-0">
+					<label for="phone-text">Оставьте свой номер телефона, мы вам перезвоним</label>
+					<input type="text" id="phone-text"
+                           class="form-control mr-sm-2"
+                           placeholder="номер телефона"
+                           aria-label="Phone number">                          
+                    <button type="submit" class="btn btn-outline-success btn-sm my-2 mr-sm-2 btn-block">	Отправить</button>
+				</form>
+			</div>
+			<!-- <div class="modal-footer">
+				
+			</div> -->
+		</div>		
 	</div>
 </div>
 
