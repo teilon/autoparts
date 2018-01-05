@@ -11,12 +11,21 @@
 					<img class="masthead-brand" src="{% static 'app_auto/logo.png' %}" alt="logo" width='50' height='50'>
 					<!-- <h3 class="masthead-brand">Cover</h3>					 -->
 					<nav class="nav nav-masthead">
-						<a href="#" class="nav-link active">Home</a>
-						<a href="#" class="nav-link">Features</a>
-						<a href="" class="nav-link">Contact</a>
+						<!--<a href="#" class="nav-link active">Home</a>-->
+						<!--<a href="#" class="nav-link">Features</a>-->
+						<!--<a href="" class="nav-link">Contact</a>-->
+
+						<form class="inline my-2 my-lg-0">
+							<!--<label for="phone-text">мы вам перезвоним</label>-->
+							<input type="text" id="phone-text"
+                                   class="form-control mr-sm-2"
+                                   placeholder="номер телефона"
+                                   aria-label="Phone number">
+						</form>
+						<button class="btn btn-outline-success my-2 my-sm-0">Отправить</button>
 					</nav>
-				</div>				
-			</header>			 
+				</div>
+			</header>
 			<main class="inner cover" role="main">
 				<h1 class="cover-heading info-content">Автозапчасти</h1>
 				<p class="lead info-content">на любое авто</p>
