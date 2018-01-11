@@ -8,7 +8,7 @@
 		<div class="cover-container">
 			<header class="masthead clearfix">
 				<div class="inner">
-					<img class="masthead-brand" src="{% static 'app_auto/logo.png' %}" alt="logo" width='50' height='50'>
+					<img class="masthead-brand" src="{% static 'app_auto/images/logo.png' %}" alt="logo" width='50' height='50'>
 					<!-- <h3 class="masthead-brand">Cover</h3>					 -->
 					<nav class="nav nav-masthead">
 						<!--<a href="#" class="nav-link active">Home</a>-->
@@ -36,9 +36,14 @@
 						"."
 					</p>
 					-->
-					{% for model_name in models %}
-						{{ model_name }}
+					{% for model_name in models %}					
+						<img class="mastfoot-logo" src="{{ model_name }}" alt="logo" width='50' height='50'>
+						<!-- <img class="mastfoot-logo" src="{% static 'app_auto/images/auto_logos/logo_audi.png'%}" alt="logo" width='50' height='50'> -->
+						
+						<p>{{ model_name }}</p>
 					{% endfor %}
+
+					<!-- <img class="mastfoot-logo" src="{% static 'app_auto/images/auto_logos/logo_audi.png'  alt="logo" width='50' height='50' %}" alt=""> -->
 
 					<!-- <form class="inline my-2 my-lg-0">
 						<label for="phone-text">Оставьте свой номер телефона, мы вам перезвоним</label>
