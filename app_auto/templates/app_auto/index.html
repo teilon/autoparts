@@ -13,11 +13,18 @@
 					<nav class="nav nav-masthead">
 						<!--<a href="#" class="nav-link active">Home</a>-->
 						<!--<a href="#" class="nav-link">Features</a>-->
-						<a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Вы можете оставить свой номер телефона</a>
+						<!-- <a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Вы можете оставить свой номер телефона</a> -->
 
 						
 						
 						<!-- my-2 my-sm-0 -->
+
+						<form class="form-inline my-2 my-lg-0">
+							<label class="nav-text" for="#phone-text">мы вам перезвоним</label>
+							<input type="text" class="form-control mr-sm-2" placeholder="ваш телефон" aria-label="Search" id="phone-text">
+						</form>			
+						<button type="submit" class="btn btn-outline-secondary my-2 my-sm-0">отправить</button>
+
 					</nav>
 				</div>
 			</header>
@@ -36,14 +43,15 @@
 						"."
 					</p>
 					-->
-					{% for model_name in models %}					
-						<img class="mastfoot-logo" src="{{ model_name }}" alt="logo" width='50' height='50'>
-						<!-- <img class="mastfoot-logo" src="{% static 'app_auto/images/auto_logos/logo_audi.png'%}" alt="logo" width='50' height='50'> -->
-						
-						<p>{{ model_name }}</p>
-					{% endfor %}
 
-					<!-- <img class="mastfoot-logo" src="{% static 'app_auto/images/auto_logos/logo_audi.png'  alt="logo" width='50' height='50' %}" alt=""> -->
+					{% for m in models %}
+
+						{% with 'app_auto/images/auto_logos/'|add:m as image_static %}
+							<img src="{% static image_static %}" alt="logo" width='50' height='50'>
+						{% endwith %}
+						
+
+					{% endfor %}
 
 					<!-- <form class="inline my-2 my-lg-0">
 						<label for="phone-text">Оставьте свой номер телефона, мы вам перезвоним</label>

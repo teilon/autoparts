@@ -23,15 +23,17 @@ def index(request):
 				'Volkswagen', 'Volvo', 'Vauxhall'
 			]
 
-	models = [	'Audi',	'Abarth' ]
+	# models = [	'Audi',	'Abarth' ]
 
 	output = []
 	for m in models:
 		model_name = m.replace(' ', '_').lower()
-		static_file = "{} static 'app_auto/images/auto_logos/logo_{}.png' {}".format('{%', model_name, '%}')
+		# static_file = "{} static 'app_auto/images/auto_logos/logo_{}.png' {}".format('{%', model_name, '%}')
 		# static_file = 'app_auto/images/auto_logos/logo_{}.png'.format(model_name)
 
-		output.append(static_file)
+
+		output.append('logo_' + model_name + '.png')
+		# output.append(static_file)
 
 
 	return render(request, 'app_auto/index.html', {'models' : output,})
