@@ -3,6 +3,13 @@
 
 {% block content %}
 
+<style>
+   body {
+    background-image: url({% static 'app_auto/images/bg.jpg' %}); /* Путь к фоновому изображению */
+    background-color: #c7b39b; /* Цвет фона */
+   }
+</style>
+
 <div class="site-wrapper">
 	<div class="site-wrapper-inner">
 		<div class="cover-container">
@@ -47,7 +54,7 @@
 					{% for m in models %}
 
 						{% with 'app_auto/images/auto_logos/'|add:m as image_static %}
-							<img src="{% static image_static %}" alt="logo" width='50' height='50'>
+							<img src="{% static image_static %}" alt="logo">
 						{% endwith %}
 						
 

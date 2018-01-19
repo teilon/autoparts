@@ -18,12 +18,10 @@ def index(request):
 				'Opel',
 				'Peugeot', 'Porsche', 'Plymouth',
 				'Renault', 'Rolls-Royce', 'Ram',
-				'Subaru', 'Suzuki', 'SAAB', 'Scania', 'Skoda', 'Ssang Yong', 'Seat', 'Smart'
+				'Subaru', 'Suzuki', 'SAAB', 'Scania', 'Skoda', 'Ssang Yong', 'Seat', 'Smart',
 				'Toyota',
 				'Volkswagen', 'Volvo', 'Vauxhall'
 			]
-
-	# models = [	'Audi',	'Abarth' ]
 
 	output = []
 	for m in models:
@@ -32,7 +30,7 @@ def index(request):
 		# static_file = 'app_auto/images/auto_logos/logo_{}.png'.format(model_name)
 
 
-		output.append('logo_' + model_name + '.png')
+		output.append('logo_' + model_name + '50x50.png')
 		# output.append(static_file)
 
 
